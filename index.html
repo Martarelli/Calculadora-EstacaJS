@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calc Estacas</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 class="titulo width100">Calculadora de Estaca com 1 tipo de solo</h1>
+    <h2 class="metodo width100">(Método Aoki-Velloso)</h2>
+
+    <form action="" class="width100">
+
+      <label for=""> Diâmetro (m):
+        <input id="diametro" class="width50 input" type="number" step="0.1" placeholder="Digite o diâmetro da estaca">
+      </label><br><br>
+
+      <label for=""> Profundidade (m):
+        <input id="profundidade" type="number" class="width50 input"  step="0.1" placeholder="Digite a profundidade da estaca">
+      </label><br><br>
+
+      <label for=""> NSPT da camada lateral:
+        <input id="nsptlat" type="number" class="width50  input"  step="0.5" placeholder="Digite o NSPT lateral">
+      </label><br><br>
+
+      <label for=""> NSPT da camada da ponta:
+        <input id="nsptpont" type="number" class="width50 input" step="0.5" placeholder="Digite o NSPT da ponta">
+      </label><br><br>
+
+      <label for=""> Carga Solicitada (tf): 
+        <input id="carga" type="number" class="width50 input" step="0.1" placeholder="Digite a carga solicitada">
+      </label><br><br>
+
+      <div class="width100 buttondiv">
+        <input type="submit" class="button" onclick="main()">
+        <input type="reset" class="button">
+      </div>
+
+    </form> 
+    <script src="script.js" defer></script>
+    </body>
+</html>

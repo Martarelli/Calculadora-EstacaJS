@@ -1,0 +1,61 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 25px 0px 15px 0px;
+}
+
+.metodo {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1rem;
+  padding: 0px 0px 20px 0px;
+
+}
+label {
+  width: 20%;
+  margin-left: 25px;
+}
+.input {
+  width: 50%;
+  float: right;
+  margin-right: 25px;
+  padding: 5px;
+}
+
+.buttondiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin: 25px 0px 25px 0px;
+}
+.button {
+  width: 35%;
+  padding: 5px;
+  background-color: #555;
+  color: #000;
+  font-weight: 800;
+}
