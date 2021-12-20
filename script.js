@@ -64,8 +64,6 @@ function recebeEstaca(){
 function recebeSolo(){
   let check = true
   while (check){
-    solo_escolha =  prompt('-----AREIAS-----\nAreia (A)\nAreia Siltos (AS)\nAreia Silto Argilosa (ASA)\nAreia Argilosa (AA)\nAreia Argilo Siltosa (AAS)\n-----SILTES-----\nSilte (S)\nSilte Arenoso (SA)\nSilte Areno Argiloso (SAA)\nSilte Argiloso (SC)\nSilte Argilo Arenoso (SCA)\n-----ARGILAS-----\nArgila (C)\nArgila Arenosa (CA)\nArgila ArenoSiltosa (CAS)\nArgila Siltosa (CS)\nArgila Silto Arenosa (CSA)\nQual o tipo de solo do terreno?: ').toUpperCase();
-    
     if(solo_escolha == 'A' || 
       solo_escolha == 'AS' || 
       solo_escolha == 'ASA' || 
@@ -116,6 +114,7 @@ function capturando(){
   nl = document.getElementById('nsptlat').value;
   np = document.getElementById('nsptpont').value;
   carga = document.getElementById('carga').value;
+  solo_escolha = document.getElementById('solo').value;
 
   if (diam <= 0){
     alert('O diâmetro tem que ser maior do que 0!');
@@ -134,6 +133,7 @@ function capturando(){
     console.log('NSPT camada = ' + nl);
     console.log('NSPT ponta = ' + np);
     console.log('Carga solicitada = ' + carga);
+    console.log('Solo escolhido = ' + solo_escolha);
     check = 1;
   }
 }

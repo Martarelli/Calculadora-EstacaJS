@@ -5,18 +5,8 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   background-color: #000;
   color: #fff;
-}
-
-.width100 {
-  width: 100%;
-}
-
-.width50 {
-  width: 50%;
 }
 
 .titulo {
@@ -32,30 +22,40 @@ body {
   font-style: italic;
   font-size: 1rem;
   padding: 0px 0px 20px 0px;
+}
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 label {
-  width: 20%;
-  margin-left: 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
+
 .input {
-  width: 50%;
-  float: right;
-  margin-right: 25px;
-  padding: 5px;
+  padding: 15px;
+  font-size: 1.2rem;
+  width: 65%;
 }
 
 .buttondiv {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-evenly;
-
-  margin: 25px 0px 25px 0px;
+  margin: 50px 0px 50px 0px;
 }
+
 .button {
   width: 35%;
   padding: 5px;
   background-color: #555;
+  height: 50px;
+  font-size: 1.2rem;
   color: #000;
   font-weight: 800;
 }

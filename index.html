@@ -7,32 +7,57 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1 class="titulo width100">Calculadora de Estaca com 1 tipo de solo</h1>
-    <h2 class="metodo width100">(Método Aoki-Velloso)</h2>
+    
+    <h1 class="titulo">Calculadora de Estaca com 1 tipo de solo</h1>
+    <h2 class="metodo">(Método Aoki-Velloso)</h2>
 
     <form action="" class="width100">
 
-      <label for=""> Diâmetro (m):
-        <input id="diametro" class="width50 input" type="number" step="0.1" placeholder="Digite o diâmetro da estaca">
-      </label><br><br>
+      <label class="label"> Diâmetro (m):</label>
+        <input id="diametro" class="input" type="number" step="0.1" placeholder="Digite o diâmetro da estaca..." required> 
+      <br><br>
 
-      <label for=""> Profundidade (m):
-        <input id="profundidade" type="number" class="width50 input"  step="0.1" placeholder="Digite a profundidade da estaca">
-      </label><br><br>
+      <label>Profundidade (m):</label>
+        <input id="profundidade" type="number" class="input"  step="0.1" placeholder="Digite a profundidade da estaca..." required>
+      <br><br>
 
-      <label for=""> NSPT da camada lateral:
-        <input id="nsptlat" type="number" class="width50  input"  step="0.5" placeholder="Digite o NSPT lateral">
-      </label><br><br>
+      <label>NSPT da camada lateral:</label>
+        <input id="nsptlat" type="number" class="input" step="0.5" placeholder="Digite o NSPT lateral..." required>
+      <br><br>
 
-      <label for=""> NSPT da camada da ponta:
-        <input id="nsptpont" type="number" class="width50 input" step="0.5" placeholder="Digite o NSPT da ponta">
-      </label><br><br>
+      <label>NSPT da camada da ponta:</label>
+        <input id="nsptpont" type="number" class="input" step="0.5" placeholder="Digite o NSPT da ponta..." required>
+      <br><br>
 
-      <label for=""> Carga Solicitada (tf): 
-        <input id="carga" type="number" class="width50 input" step="0.1" placeholder="Digite a carga solicitada">
-      </label><br><br>
+      <label>Carga Solicitada (tf):</label>
+        <input id="carga" type="number" class="input" step="0.1" placeholder="Digite a carga solicitada..." required>
+      <br><br>
 
-      <div class="width100 buttondiv">
+      <label>Tipo de solo:</label>
+        <select id="solo" class="input">
+          <optgroup label="----- AREIAS -----">
+            <option value="A">Areia</option>
+            <option value="AS">Areia Siltosa</option>
+            <option value="ASA">Areia Silto Argilosa</option>
+            <option value="AA">Areia Argilosa</option>
+            <option value="AAS">Areia Argilo Siltosa</option>
+          </optgroup>
+          <optgroup label="----- SILTES -----">
+            <option value="S">Silte</option>
+            <option value="SA">Silte Arenoso</option>
+            <option value="SAA">Silte Areno Argiloso</option>
+            <option value="SC">Silte Argiloso</option>
+            <option value="SCA">Silte Argilo Arenoso</option>
+          </optgroup>
+          <optgroup label="----- ARGILAS -----">
+            <option value="C">Argila</option>
+            <option value="CA">Argila Arenosa</option>
+            <option value="CAS">Argila Areno Siltosa</option>
+            <option value="CS">Argila Siltosa</option>
+            <option value="CSA">Argila Silto Arenosa</option>
+          </optgroup>
+        </select>
+      <div class="buttondiv">
         <input type="submit" class="button" onclick="main()">
         <input type="reset" class="button">
       </div>
