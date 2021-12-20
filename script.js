@@ -32,6 +32,7 @@ let prof = 0;
 let nl = 0;
 let np = 0;
 let carga = 0;
+let check = 0;
 
 
 //ATRIBUI OS VALORES DOS FATORES DE PONDERAÇÃO F1(PONTA) E F2(LATERAL) PARA O TIPO DE ESTACA  ==== não esta puxando a estaca ====
@@ -115,6 +116,26 @@ function capturando(){
   nl = document.getElementById('nsptlat').value;
   np = document.getElementById('nsptpont').value;
   carga = document.getElementById('carga').value;
+
+  if (diam <= 0){
+    alert('O diâmetro tem que ser maior do que 0!');
+  } else if (prof <= 0){
+    alert('A profundidade tem que ser maior do que 0!');
+  } else if (nl <= 0){
+    alert('O valor do NSPT tem que ser maior do que 0!');
+  } else if (np <= 0){
+    alert('O valor do NSPT tem que ser maior do que 0!');
+  } else if (carga <= 0){
+    alert('A carga tem que ser maior do que 0!');
+  } else {
+    alert('Dados inseridos corretamente')
+    console.log('Diametro = ' + diam);
+    console.log('Profundidade = ' + prof);
+    console.log('NSPT camada = ' + nl);
+    console.log('NSPT ponta = ' + np);
+    console.log('Carga solicitada = ' + carga);
+    check = 1;
+  }
 }
 
 
@@ -124,54 +145,24 @@ function main(){
   let rodando = true;
 
   while (rodando){
-    /*
-    diam = prompt('Qual o diâmetro da estaca?(m): ')
-    while (diam <= 0){
-      diam = prompt('O diâmetro tem que ser maior do que 0!\nQual o diâmetro da estaca?(m): ');
-    };
-    console.log('Diametro = ' + diam);
-
-
-    prof = prompt('Qual o a profundidade da estaca?(m): ')
-    while (prof <= 0){
-        prof = prompt('A profundidade tem que ser maior do que 0!\nQual o a profundidade da estaca?(m): ')
-    };
-    console.log('Profundidade = ' + prof);
-
-    nl = prompt('Qual o valor do NSPT da camada a ser avaliada?: ')
-    while (nl <= 0){
-        nl = prompt('O valor do NSPT tem que ser maior do que 0!\nQual o valor do Nspt da camada a ser avaliada?: ')
-    };
-    console.log('NSPT camada = ' + nl);
-
-
-    np = prompt('Qual o valor do NSPT da camada de apoio da ponta da estaca?: ')
-    while (np <= 0){
-        np = prompt('O valor do NSPT tem que ser maior do que 0!\nQual o valor do Nspt da camada de apoio da ponta da estaca?: ')
-    };
-    console.log('NSPT ponta = ' + np);
-
-    carga = prompt('Qual carga solicitada na estaca?(tf): ')
-    while (carga <= 0){
-        carga = prompt('A carga tem que ser maior do que 0!\nQual a solicitada na estaca?(tf): ')
-    };
-    console.log('Carga solicitada = ' + carga); */
-
     capturando();
-    
-    recebeEstaca();    
-    recebeSolo();
-    calculo();
 
-    if (calc_est == 1){
-        console.log('Cada estaca suporta ' + tatf.toFixed(2) +', Desse modo, será necessária ' + Math.ceil(calc_est) + ' estaca para a carga solicitada')
+    if (check == 1){
+      recebeEstaca();    
+      recebeSolo();
+      calculo();
+
+      if (calc_est == 1){
+          console.log('Cada estaca suporta ' + tatf.toFixed(2) +', Desse modo, será necessária ' + Math.ceil(calc_est) + ' estaca para a carga solicitada')
+      } else {
+          console.log('Cada estaca suporta ' + tatf.toFixed(2) +', Desse modo, Serão necessárias ' + Math.ceil(calc_est) + ' estacas para a carga solicitada')
+      };
+      alert('Obrigado por usar :)');
+      rodando = false;
     } else {
-        console.log('Cada estaca suporta ' + tatf.toFixed(2) +', Desse modo, Serão necessárias ' + Math.ceil(calc_est) + ' estacas para a carga solicitada')
-    };
-
-        alert('Obrigado por usar :)');
-        rodando = false;
-    
+      alert('Entrada invalida, tente novamente');
+      rodando = false;
+  }
   };
 };
 
