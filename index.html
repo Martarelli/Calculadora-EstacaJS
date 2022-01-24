@@ -12,96 +12,105 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="body">
     <h1 class="titulo">Calculadora de Estaca com 1 tipo de solo</h1>
     <h2 class="metodo">(Método Aoki-Velloso)</h2>
 
-    <form action="" class="width100">
-      <div class="input-group mb-3 input-group-lg">
+    <form action="" class="formdiv">
+      <div class="input-group mb-3 input-group-lg margin20e">
         <span class="input-group-text width30">Diâmetro (m)</span>
         <input
           id="diametro"
           type="number"
-          class="form-control"
+          class="form-control margin20d"
           aria-label="Amount (to the nearest dollar)"
           step="0.1"
           placeholder="Digite o diâmetro da estaca"
+          required
         />
       </div>
 
-      <div class="input-group mb-3 input-group-lg">
+      <div class="input-group mb-3 input-group-lg margin20e">
         <span class="input-group-text width30">Profundidade (m)</span>
         <input
           id="profundidade"
           type="number"
-          class="form-control"
+          class="form-control margin20d"
           step="0.1"
           placeholder="Digite a profundidade da estaca"
+          required
         />
       </div>
 
-      <div class="input-group mb-3 input-group-lg">
+      <div class="input-group mb-3 input-group-lg margin20e">
         <span class="input-group-text width30">NSPT da camada lateral</span>
         <input
           id="nsptlat"
           type="number"
-          class="form-control"
+          class="form-control margin20d"
           step="0.5"
           placeholder="Digite o NSPT lateral"
+          required
         />
       </div>
 
-      <div class="input-group mb-3 input-group-lg">
+      <div class="input-group mb-3 input-group-lg margin20e">
         <span class="input-group-text width30">NSPT da camada da ponta</span>
         <input
           id="nsptpont"
           type="number"
-          class="form-control"
+          class="form-control margin20d"
           step="0.5"
           placeholder="Digite o NSPT da ponta"
+          required
         />
       </div>
 
-      <div class="input-group mb-3 input-group-lg">
+      <div class="input-group mb-3 input-group-lg margin20e">
         <span class="input-group-text width30">Carga Solicitada (tf)</span>
         <input
           id="carga"
           type="number"
-          class="form-control"
+          class="form-control margin20d"
           step="0.1"
           placeholder="Digite a carga solicitada"
+          required
         />
       </div>
 
-      <label>Tipo de solo:</label>
-      <select id="solo" class="input">
-        <optgroup label="----- AREIAS -----">
-          <option value="A">Areia</option>
-          <option value="AS">Areia Siltosa</option>
-          <option value="ASA">Areia Silto Argilosa</option>
-          <option value="AA">Areia Argilosa</option>
-          <option value="AAS">Areia Argilo Siltosa</option>
-        </optgroup>
-        <optgroup label="----- SILTES -----">
-          <option value="S">Silte</option>
-          <option value="SA">Silte Arenoso</option>
-          <option value="SAA">Silte Areno Argiloso</option>
-          <option value="SC">Silte Argiloso</option>
-          <option value="SCA">Silte Argilo Arenoso</option>
-        </optgroup>
-        <optgroup label="----- ARGILAS -----">
-          <option value="C">Argila</option>
-          <option value="CA">Argila Arenosa</option>
-          <option value="CAS">Argila Areno Siltosa</option>
-          <option value="CS">Argila Siltosa</option>
-          <option value="CSA">Argila Silto Arenosa</option>
-        </optgroup>
-      </select>
+      <div class="input-group mb-3 input-group-lg margin20e">
+        <span class="input-group-text width30">Camada de Solo SPT</span>
+        <select id="solo" class="form-select margin20d" required>
+          <option selected>Selecione o solo</option>
+          <optgroup label="----- AREIAS -----">
+            <option value="A">Areia</option>
+            <option value="AS">Areia Siltosa</option>
+            <option value="ASA">Areia Silto Argilosa</option>
+            <option value="AA">Areia Argilosa</option>
+            <option value="AAS">Areia Argilo Siltosa</option>
+          </optgroup>
+          <optgroup label="----- SILTES -----">
+            <option value="S">Silte</option>
+            <option value="SA">Silte Arenoso</option>
+            <option value="SAA">Silte Areno Argiloso</option>
+            <option value="SC">Silte Argiloso</option>
+            <option value="SCA">Silte Argilo Arenoso</option>
+          </optgroup>
+          <optgroup label="----- ARGILAS -----">
+            <option value="C">Argila</option>
+            <option value="CA">Argila Arenosa</option>
+            <option value="CAS">Argila Areno Siltosa</option>
+            <option value="CS">Argila Siltosa</option>
+            <option value="CSA">Argila Silto Arenosa</option>
+          </optgroup>
+        </select>
+      </div>
+
       <div class="width100 buttondiv">
         <button type="submit" class="btn btn-primary button" onclick="main()">
           Enviar
         </button>
-        <button type="reset" class="btn btn-secondary button">Redefinir</button>
+        <button type="reset" class="btn btn-danger button">Redefinir</button>
       </div>
     </form>
     <script src="script.js" defer></script>
