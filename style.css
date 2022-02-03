@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: column;
   background-image: url(https://1.bp.blogspot.com/-q9XEOxUvI8o/Xd3OJ0qfggI/AAAAAAAAgdg/WyEFyh1vUd8v0mEu6UrrPmrqtSaeFxFXACLcBGAsYHQ/s2560/space-colorful-art-4k-a4-2560x1440.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .width100 {
@@ -22,13 +24,6 @@
 
 .width30 {
   width: 30%;
-}
-
-.margin20e {
-  margin-left: 20px;
-}
-.margin20d {
-  margin-right: 20px;
 }
 
 .titulo {
@@ -54,6 +49,11 @@
   align-items: center;
   justify-content: space-evenly;
   width: 98%;
+  margin: -1px;
+}
+
+.main {
+  padding: 0px 20px;
 }
 
 .buttondiv {

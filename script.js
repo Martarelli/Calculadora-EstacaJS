@@ -143,6 +143,7 @@ function main() {
     recebeSolo();
     calculo();
 
+
     if (calc_est == 1) {
       console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, será necessária ' + Math.ceil(calc_est) + ' estaca para a carga solicitada');
       check = false;
@@ -151,7 +152,9 @@ function main() {
       check = false;
     };
     alert('Obrigado por usar :)');
+    
   };
+ event.preventDefault(); 
 };
 
 
