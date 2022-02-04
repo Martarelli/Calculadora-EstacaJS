@@ -49,7 +49,6 @@
   align-items: center;
   justify-content: space-evenly;
   width: 98%;
-  margin: -1px;
 }
 
 .main {
@@ -72,4 +71,23 @@
 footer img {
   height: 25px;
   width: 25px;
+}
+
+.linkfooter{
+  text-decoration: none;
+  color: #fff;
+}
+
+.linkfooter:hover{
+  color: red;
+  transition: ease-in-out 0.5s;
+}
+
+@media screen and (max-width: 980px){
+  
+  .media{
+    width: 100%;
+    justify-content: center;
+    }
+
 }
