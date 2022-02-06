@@ -88,6 +88,8 @@ footer img {
   .media{
     width: 100%;
     justify-content: center;
+    border-radius: 10px !important;
     }
+ 
 
 }
