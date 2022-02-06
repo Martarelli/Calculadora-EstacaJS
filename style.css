@@ -70,8 +70,8 @@
 }
 
 footer img {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 .linkfooter{
@@ -90,6 +90,26 @@ footer img {
   width: 100%;
 }
 
+.footerbtn{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 40px !important;
+  border-color: #000 !important;
+}
+
+.footergithub{
+  background-color: #fff !important;
+}
+
+.footersec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 @media screen and (max-width: 980px){
   
   .media{
