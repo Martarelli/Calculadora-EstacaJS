@@ -131,8 +131,8 @@ function capturando() {
     console.log('Solo escolhido = ' + solo_escolha);
     console.log('Estaca Escolhida = ' + est);
     check = true;
-  }
-}
+  };
+};
 
 
 //FUNÇÃO PRINCIPAL DO SISTEMA
@@ -143,20 +143,18 @@ function main() {
     recebeSolo();
     calculo();
 
-
     if (calc_est == 1) {
       console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, será necessária ' + Math.ceil(calc_est) + ' estaca para a carga solicitada');
       check = false;
     } else {
       console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, Serão necessárias ' + Math.ceil(calc_est) + ' estacas para a carga solicitada');
-      check = false;
     };
     alert('Obrigado por usar :)');
-    
   };
-  document.getElementById("enviar").addEventListener("click", function(event){
-    event.preventDefault()
-  });; 
+  // document.getElementById("enviar").addEventListener("click", function(event){
+  //   console.log('fui executado')
+  //   event.preventDefault()
+  // });
 };
 
 
