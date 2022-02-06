@@ -2,6 +2,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -11,7 +12,7 @@
   flex-direction: column;
   background-image: url(https://1.bp.blogspot.com/-q9XEOxUvI8o/Xd3OJ0qfggI/AAAAAAAAgdg/WyEFyh1vUd8v0mEu6UrrPmrqtSaeFxFXACLcBGAsYHQ/s2560/space-colorful-art-4k-a4-2560x1440.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 
 .width100 {
@@ -83,6 +84,12 @@ footer img {
   transition: ease-in-out 0.5s;
 }
 
+.footerb {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
 @media screen and (max-width: 980px){
   
   .media{
@@ -91,5 +98,8 @@ footer img {
     border-radius: 10px !important;
     }
  
+    .footerb {
+      position: relative;
+    }
 
 }

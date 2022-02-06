@@ -154,7 +154,9 @@ function main() {
     alert('Obrigado por usar :)');
     
   };
- event.preventDefault(); 
+  document.getElementById("enviar").addEventListener("click", function(event){
+    event.preventDefault()
+  });; 
 };
 
 
