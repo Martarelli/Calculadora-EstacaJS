@@ -139,6 +139,7 @@ function capturando() {
 function main() {
   capturando();
   if (check === true) {
+    window.location.replace('resultados.html');
     recebeEstaca();
     recebeSolo();
     calculo();
@@ -157,6 +158,9 @@ function main() {
   // });
 };
 
-
+function backToMain() {
+  alert('Clicado')
+  window.location.href('index.html');
+}
 
 
