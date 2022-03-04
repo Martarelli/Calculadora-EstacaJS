@@ -150,7 +150,7 @@ function main() {
     } else {
       console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, Serão necessárias ' + Math.ceil(calc_est) + ' estacas para a carga solicitada');
     };
-    alert('Obrigado por usar :)');
+  document.getElementById("result").innerHTML = `<p>SOU UM ELEMENTO</p>`;
   };
   // document.getElementById("enviar").addEventListener("click", function(event){
   //   console.log('fui executado')
