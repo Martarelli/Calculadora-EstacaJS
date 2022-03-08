@@ -139,24 +139,23 @@ function capturando() {
 function main() {
   capturando();
   if (check === true) {
-    window.location.replace('resultados.html');
+    // window.location.replace('resultados.html');
     recebeEstaca();
     recebeSolo();
     calculo();
-
-    if (calc_est == 1) {
-      console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, será necessária ' + Math.ceil(calc_est) + ' estaca para a carga solicitada');
-      check = false;
-    } else {
-      console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, Serão necessárias ' + Math.ceil(calc_est) + ' estacas para a carga solicitada');
-    };
-  document.getElementById("result").innerHTML = `<p>SOU UM ELEMENTO</p>`;
-  };
-  // document.getElementById("enviar").addEventListener("click", function(event){
-  //   console.log('fui executado')
-  //   event.preventDefault()
-  // });
+    let qtdEstacas = Math.ceil(calc_est)
+    let qtdCarga = tatf.toFixed(2)
+    document.getElementById('estacas').innerHTML = qtdEstacas;
+     document.getElementById('quantidade').innerHTML = qtdCarga;
 };
+//if (calc_est == 1) {
+//      console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, será necessária ' + Math.ceil(calc_est) + ' estaca para a carga solicitada');
+//      check = false;
+//    } else {
+//      console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, Serão necessárias ' + Math.ceil(calc_est) + ' estacas para a carga solicitada');
+//    };
+// };
+
 
 function backToMain() {
   window.location.href ='index.html';

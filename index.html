@@ -20,7 +20,7 @@
 	<main>
 		<form class="main" id="form">
       <!-- INPUT DIÂMETRO -->
-			<div class="input-group mb-3 input-group-lg ">
+			<div class="input-group mb-3 input-group ">
 				<span class="input-group-text width30 media">Diâmetro (m)</span>
         <input
           id="diametro"
@@ -33,7 +33,7 @@
       </div>
 
       <!-- INPUT PROFUNDIDADE -->
-      <div class="input-group mb-3 input-group-lg ">
+      <div class="input-group mb-3 input-group ">
         <span class="input-group-text width30 media">Profundidade (m)</span>
         <input
           id="profundidade"
@@ -46,7 +46,7 @@
       </div>
 
       <!-- INPUT NSPT LATERAL -->
-      <div class="input-group mb-3 input-group-lg ">
+      <div class="input-group mb-3 input-group ">
         <span class="input-group-text width30 media">NSPT da camada lateral</span>
         <input
           id="nsptlat"
@@ -59,7 +59,7 @@
       </div>
 
       <!-- INPUT NSPT PONTA -->
-      <div class="input-group mb-3 input-group-lg ">
+      <div class="input-group mb-3 input-group ">
         <span class="input-group-text width30 media">NSPT da camada da ponta</span>
         <input
           id="nsptpont"
@@ -72,7 +72,7 @@
       </div>
 
       <!-- INPUT CARGA -->
-      <div class="input-group mb-3 input-group-lg ">
+      <div class="input-group mb-3 input-group ">
         <span class="input-group-text width30 media">Carga Solicitada (tf)</span>
         <input
           id="carga"
@@ -85,7 +85,7 @@
       </div>
 
       <!-- INPUT SELECT AREIAS -->
-      <div class="input-group mb-3 input-group-lg ">
+      <div class="input-group mb-3 input-group ">
         <span class="input-group-text width30 media">Camada de Solo SPT</span>
         <select name="solo" id="solo" class="form-select media" required>
           <option value="" selected disabled hidden>Selecione o Solo...</option>
@@ -114,7 +114,7 @@
       </div>
 
       <!-- INPUT SELECT SOLOS -->
-       <div class="input-group mb-3 input-group-lg ">
+       <div class="input-group mb-3 input-group ">
           <span class="input-group-text width30 media">Tipo de Estaca</span>
         <select name="est" id="est" class="form-select media" required>
             <option value=""selected disabled hidden>Selecione a Estaca...</option>
@@ -135,8 +135,11 @@
       <!-- BOTÃO RESET -->
         <button type="reset" class="btn btn-danger button">Redefinir</button>
       </div>
-      
     </form>
+    <div class="results">  
+      <div id="estacas"></div>
+      <div id= "quantidade"></div>
+    </div>
   </main>
 
 <!-- FOOTER DA PÁGINA -->
