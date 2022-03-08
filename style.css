@@ -108,8 +108,32 @@ footer img {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-itens: center;
+  height: 60px;
+  weight: 100%;
+  background: purple;
+}
+
+#estacas {
+  border: 3px black;
+  background: rgba(30,30,30,0.5);
+  height: 45px;
+  weight: 50px;
+}
+
+#quantidade {
+  border: 3px black;
+  background: rgba(30,30,30,0.5);
+  height: 45px;
+  weight: 50px;
+}
+
 @media screen and (max-width: 980px){
   
   .media{
