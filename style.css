@@ -113,28 +113,33 @@ footer img {
 .results {
   display: flex;
   margin:0;
-  padding:0;
-  justify-content: space-evenly;
+  padding:10px;
+  justify-content: space-around;
   align-items: center;
   height: 60px;
   weight: 100%;
   background: purple;
+  text-align: center;
 }
 
 #estacas {
   color: whitesmoke;
-  background: rgba(30,30,30,0.5);
   height: 45px;
   weight: 50px;
 }
 
 #quantidade {
   color: whitesmoke;
-  background: rgba(30,30,30,0.5);
   min-height: 45px;
   min-weight: 50px;
 }
-
+.container {
+  padding-top: 15px;
+}
+.container > span {
+  color: whitesmoke;
+  font-weight: 800;
+}
 @media screen and (max-width: 980px){
   
   .media{
