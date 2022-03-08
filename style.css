@@ -112,26 +112,27 @@ footer img {
 
 .results {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-itens: center;
+  margin:0;
+  padding:0;
+  justify-content: space-evenly;
+  align-items: center;
   height: 60px;
   weight: 100%;
   background: purple;
 }
 
 #estacas {
-  border: 3px black;
+  color: whitesmoke;
   background: rgba(30,30,30,0.5);
   height: 45px;
   weight: 50px;
 }
 
 #quantidade {
-  border: 3px black;
+  color: whitesmoke;
   background: rgba(30,30,30,0.5);
-  height: 45px;
-  weight: 50px;
+  min-height: 45px;
+  min-weight: 50px;
 }
 
 @media screen and (max-width: 980px){
