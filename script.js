@@ -146,7 +146,7 @@ function main() {
     let qtdEstacas = Math.ceil(calc_est)
     let qtdCarga = tatf.toFixed(2)
     document.getElementById('estacas').innerHTML = qtdEstacas;
-     document.getElementById('quantidade').innerHTML = qtdCarga;
+     document.getElementById('quantidade').innerHTML = `$(qtdCarga) tf`;
   };
 };
 //if (calc_est == 1) {
