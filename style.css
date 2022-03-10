@@ -112,35 +112,17 @@ footer img {
 
 .results {
   display: flex;
-  margin:0;
-  padding:10px;
-  justify-content: space-around;
-  align-items: center;
-  height: 60px;
-  width: 100%;
-  background: purple;
+  justify-content: center;
   text-align: center;
 }
 
-#estacas {
+.container > span, #estacas, #quantidade {
   color: whitesmoke;
-  min-height: 45px;
-  min-width: 50px;
-}
-
-#quantidade {
-  color: whitesmoke;
-  min-height: 45px;
-  min-width: 50px;
+  font-weight: 800;
 }
 
 .container {
   padding-top: 15px;
-}
-
-.container > span {
-  color: whitesmoke;
-  font-weight: 800;
 }
 
 @media screen and (max-width: 980px){
