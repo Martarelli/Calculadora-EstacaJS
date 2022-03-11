@@ -146,7 +146,7 @@ function main() {
     let qtdEstacas = Math.ceil(calc_est)
     let qtdCarga = tatf.toFixed(2)
     document.getElementById('estacas').innerHTML = qtdEstacas;
-     document.getElementById('quantidade').innerHTML = `${qtdCarga} tf`;
+    document.getElementById('quantidade').innerHTML = `${qtdCarga} tf`;
   };
 };
 //if (calc_est == 1) {
@@ -156,8 +156,9 @@ function main() {
 //      console.log('Cada estaca suporta ' + tatf.toFixed(2) + ', Desse modo, Serão necessárias ' + Math.ceil(calc_est) + ' estacas para a carga solicitada');
 //    };
 
-function backToMain() {
-  window.location.href ='index.html';
+function resetResults() {
+  document.getElementById('estacas').innerHTML = `---`;
+  document.getElementById('quantidade').innerHTML = `---`;
 }
 
 
