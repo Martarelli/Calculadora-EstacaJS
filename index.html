@@ -1,186 +1,185 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Calc Estacas</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-	 crossorigin="anonymous" />
-</head>
-<body class="body">
-<!-- HEADER DA PÁGINA -->
-	<header>
-		<h1 class="titulo">Calculadora de Estaca com solo uniforme</h1>
-		<h2 class="metodo">(Método Aoki-Velloso)</h2>
-	</header>
-  
-  <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
-	<main>
-		<form class="main" id="form">
-      <!-- INPUT DIÂMETRO -->
-			<div class="input-group mb-3 input-group ">
-				<span class="input-group-text width30 media">Diâmetro (m)</span>
-        <input
-          id="diametro"
-          type="number"
-          class="form-control media"
-          step="0.1"
-          placeholder="Digite o diâmetro da estaca..."
-          required
-        />
-      </div>
-
-      <!-- INPUT PROFUNDIDADE -->
-      <div class="input-group mb-3 input-group ">
-        <span class="input-group-text width30 media">Profundidade (m)</span>
-        <input
-          id="profundidade"
-          type="number"
-          class="form-control media"
-          step="0.1"
-          placeholder="Digite a profundidade da estaca..."
-          required
-        />
-      </div>
-
-      <!-- INPUT NSPT LATERAL -->
-      <div class="input-group mb-3 input-group ">
-        <span class="input-group-text width30 media">NSPT da camada lateral</span>
-        <input
-          id="nsptlat"
-          type="number"
-          class="form-control media"
-          step="0.5"
-          placeholder="Digite o NSPT lateral..."
-          required
-        />
-      </div>
-
-      <!-- INPUT NSPT PONTA -->
-      <div class="input-group mb-3 input-group ">
-        <span class="input-group-text width30 media">NSPT da camada da ponta</span>
-        <input
-          id="nsptpont"
-          type="number"
-          class="form-control media"
-          step="0.5"
-          placeholder="Digite o NSPT da ponta..."
-          required
-        />
-      </div>
-
-      <!-- INPUT CARGA -->
-      <div class="input-group mb-3 input-group ">
-        <span class="input-group-text width30 media">Carga Solicitada (tf)</span>
-        <input
-          id="carga"
-          type="number"
-          class="form-control media"
-          step="0.1"
-          placeholder="Digite a carga solicitada..."
-          required
-        />
-      </div>
-
-      <!-- INPUT SELECT AREIAS -->
-      <div class="input-group mb-3 input-group ">
-        <span class="input-group-text width30 media">Camada de Solo SPT</span>
-        <select name="solo" id="solo" class="form-select media" required>
-          <option value="" selected disabled hidden>Selecione o Solo...</option>
-          <optgroup label="----- AREIAS -----">
-            <option value="A">Areia</option>
-            <option value="AS">Areia Siltosa</option>
-            <option value="ASA">Areia Silto Argilosa</option>
-            <option value="AA">Areia Argilosa</option>
-            <option value="AAS">Areia Argilo Siltosa</option>
-          </optgroup>
-          <optgroup label="----- SILTES -----">
-            <option value="S">Silte</option>
-            <option value="SA">Silte Arenoso</option>
-            <option value="SAA">Silte Areno Argiloso</option>
-            <option value="SC">Silte Argiloso</option>
-            <option value="SCA">Silte Argilo Arenoso</option>
-          </optgroup>
-          <optgroup label="----- ARGILAS -----">
-            <option value="C">Argila</option>
-            <option value="CA">Argila Arenosa</option>
-            <option value="CAS">Argila Areno Siltosa</option>
-            <option value="CS">Argila Siltosa</option>
-            <option value="CSA">Argila Silto Arenosa</option>
-          </optgroup>
-        </select>
-      </div>
-
-      <!-- INPUT SELECT SOLOS -->
-       <div class="input-group mb-3 input-group ">
-          <span class="input-group-text width30 media">Tipo de Estaca</span>
-        <select name="est" id="est" class="form-select media" required>
-            <option value=""selected disabled hidden>Selecione a Estaca...</option>
-            <option value="F">Franki</option>
-            <option value="M">Metálica</option>
-            <option value="PM">Pré Moldada</option>
-            <option value="E">Escavada</option>
-            <option value="RHO">Raiz, Hélice Continua ou Ômega</option>
-        </select>
-      </div>
-
-      <!-- BOTÕES -->
-      <div class="width100 buttondiv">
-      <!-- BOTÃO SUBMIT -->
-        <button id="enviar" type="button" form="form" class="btn btn-primary button" onclick="main()">
-          Enviar
-        </button>
-      <!-- BOTÃO RESET -->
-        <button type="reset" class="btn btn-danger button" onclick="resetResults()">Redefinir</button>
-      </div>
-    </form>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Calc Estacas</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous" />
+  </head>
+  <body class="body">
+  <!-- HEADER DA PÁGINA -->
+    <header>
+      <h1 class="titulo">Calculadora de Estaca com solo uniforme</h1>
+      <h2 class="metodo">(Método Aoki-Velloso)</h2>
+    </header>
     
-    <div class="results">  
-      <div class="container"> 
-        <span>Nº de Estacas:</span>
-        <div id="estacas">---</div>
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+    <main>
+      <form class="main" id="form">
+        <!-- INPUT DIÂMETRO -->
+        <div class="input-group mb-3 input-group ">
+          <span class="input-group-text width30 media">Diâmetro (m)</span>
+          <input
+            id="diametro"
+            type="number"
+            class="form-control media"
+            step="0.1"
+            placeholder="Digite o diâmetro da estaca..."
+            required
+          />
+        </div>
+
+        <!-- INPUT PROFUNDIDADE -->
+        <div class="input-group mb-3 input-group ">
+          <span class="input-group-text width30 media">Profundidade (m)</span>
+          <input
+            id="profundidade"
+            type="number"
+            class="form-control media"
+            step="0.1"
+            placeholder="Digite a profundidade da estaca..."
+            required
+          />
+        </div>
+
+        <!-- INPUT NSPT LATERAL -->
+        <div class="input-group mb-3 input-group ">
+          <span class="input-group-text width30 media">NSPT da camada lateral</span>
+          <input
+            id="nsptlat"
+            type="number"
+            class="form-control media"
+            step="0.5"
+            placeholder="Digite o NSPT lateral..."
+            required
+          />
+        </div>
+
+        <!-- INPUT NSPT PONTA -->
+        <div class="input-group mb-3 input-group ">
+          <span class="input-group-text width30 media">NSPT da camada da ponta</span>
+          <input
+            id="nsptpont"
+            type="number"
+            class="form-control media"
+            step="0.5"
+            placeholder="Digite o NSPT da ponta..."
+            required
+          />
+        </div>
+
+        <!-- INPUT CARGA -->
+        <div class="input-group mb-3 input-group ">
+          <span class="input-group-text width30 media">Carga Solicitada (tf)</span>
+          <input
+            id="carga"
+            type="number"
+            class="form-control media"
+            step="0.1"
+            placeholder="Digite a carga solicitada..."
+            required
+          />
+        </div>
+
+        <!-- INPUT SELECT AREIAS -->
+        <div class="input-group mb-3 input-group ">
+          <span class="input-group-text width30 media">Camada de Solo SPT</span>
+          <select name="solo" id="solo" class="form-select media" required>
+            <option value="" selected disabled hidden>Selecione o Solo...</option>
+            <optgroup label="----- AREIAS -----">
+              <option value="A">Areia</option>
+              <option value="AS">Areia Siltosa</option>
+              <option value="ASA">Areia Silto Argilosa</option>
+              <option value="AA">Areia Argilosa</option>
+              <option value="AAS">Areia Argilo Siltosa</option>
+            </optgroup>
+            <optgroup label="----- SILTES -----">
+              <option value="S">Silte</option>
+              <option value="SA">Silte Arenoso</option>
+              <option value="SAA">Silte Areno Argiloso</option>
+              <option value="SC">Silte Argiloso</option>
+              <option value="SCA">Silte Argilo Arenoso</option>
+            </optgroup>
+            <optgroup label="----- ARGILAS -----">
+              <option value="C">Argila</option>
+              <option value="CA">Argila Arenosa</option>
+              <option value="CAS">Argila Areno Siltosa</option>
+              <option value="CS">Argila Siltosa</option>
+              <option value="CSA">Argila Silto Arenosa</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- INPUT SELECT SOLOS -->
+        <div class="input-group mb-3 input-group ">
+            <span class="input-group-text width30 media">Tipo de Estaca</span>
+          <select name="est" id="est" class="form-select media" required>
+              <option value=""selected disabled hidden>Selecione a Estaca...</option>
+              <option value="F">Franki</option>
+              <option value="M">Metálica</option>
+              <option value="PM">Pré Moldada</option>
+              <option value="E">Escavada</option>
+              <option value="RHO">Raiz, Hélice Continua ou Ômega</option>
+          </select>
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="width100 buttondiv">
+        <!-- BOTÃO SUBMIT -->
+          <button id="enviar" type="button" form="form" class="btn btn-primary button" onclick="main()">
+            Enviar
+          </button>
+        <!-- BOTÃO RESET -->
+          <button type="reset" class="btn btn-danger button" onclick="resetResults()">Redefinir</button>
+        </div>
+      </form>
+      
+      <div class="results">  
+        <div class="container"> 
+          <span>Nº de Estacas:</span>
+          <div id="estacas">---</div>
+        </div>
+        <div class="container">
+          <span>Carga por Estacas:</span>
+          <div id= "quantidade">---</div>
+        </div>
       </div>
-      <div class="container">
-        <span>Carga por Estacas:</span>
-        <div id= "quantidade">---</div>
+    </main>
+
+  <!-- FOOTER DA PÁGINA -->
+    <footer class="bg-dark text-center text-white footerb">
+      <!-- SOCIAL MEDIA -->
+      <div class="p-2 pb-0">
+        <section class="mb-2 footersec">
+      <!-- Linkedin -->
+      <a
+        class="btn btn-floating m-1 footerbtn"
+        style="background-color: #0082ca;"
+        href="https://www.linkedin.com/in/rmartarelli/"
+        role="button"
+        ><i class=""><img src="linkedinw.png" alt="Linkedin"></i>
+        </a>
+
+      <!-- Github -->
+      <a
+        class="btn btn-floating m-1 footerbtn"
+        style="background-color: #000;"
+        href="https://github.com/martarelli/"
+        role="button"
+        ><i class=""></i
+      ><img src="githubw.png" alt="Github"></a>
+        </section>
       </div>
-    </div>
-  </main>
 
-<!-- FOOTER DA PÁGINA -->
-  <footer class="bg-dark text-center text-white footerb">
-    <!-- SOCIAL MEDIA -->
-    <div class="p-2 pb-0">
-      <section class="mb-2 footersec">
-    <!-- Linkedin -->
-    <a
-      class="btn btn-floating m-1 footerbtn"
-      style="background-color: #0082ca;"
-      href="https://www.linkedin.com/in/rmartarelli/"
-      role="button"
-      ><i class=""><img src="linkedinw.png" alt="Linkedin"></i>
-      </a>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.95);">
+        © 2022 Copyright:
+        <a class="linkfooter" href="https://www.linkedin.com/in/rmartarelli/">Renan Martarelli</a>
+      </div>
+    </footer>
 
-    <!-- Github -->
-    <a
-      class="btn btn-floating m-1 footerbtn"
-      style="background-color: #000;"
-      href="https://github.com/martarelli/"
-      role="button"
-      ><i class=""></i
-    ><img src="githubw.png" alt="Github"></a>
-      </section>
-    </div>
-
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.95);">
-      © 2022 Copyright:
-      <a class="linkfooter" href="https://www.linkedin.com/in/rmartarelli/">Renan Martarelli</a>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 
   </body>
 </html>
