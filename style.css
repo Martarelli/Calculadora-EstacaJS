@@ -10,9 +10,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  background-image: url(https://unifsa.com.br/site/wp-content/uploads/2019/06/Engenharia-Civil.png);
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-color: #222
 }
 
 .input-group-text {
